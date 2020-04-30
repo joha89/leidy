@@ -1,0 +1,47 @@
+<div class="alert alert-success" role="alert">
+
+
+
+    <div class="card">
+        <div class="card-header">
+            <div class="jumbotron">
+                <h1 class="display-4"> Tu INFORMACIÓN</h1>
+                <p class="lead">Desde nuestra plataforma le damos la bienvenida y le agradecemos a usted por su consulta</p>
+
+
+
+
+                <hr class="my-4">
+                <div class="table-responsive">
+
+                    <table class="table table-bordered table table-hover table-sm ">
+                        <thead>
+                            <tr>
+                                <th scope="col">código</th>
+                                <th scope="col">nombre</th>
+                                <th scope="col">apellido</th>
+                                <th scope="col">nota</th>
+                                <th scope="col">observación</th>
+                            </tr>
+                            <tbody>
+
+                                <tr *ngFor="let estudiante of estudiantes">
+                                    <th scope="col" *ngIf="estudiante.nota < 3.0" style="background-color: brown;">{{estudiante.codigo}}</th>
+                                    <th scope="col" *ngIf="estudiante.nota >= 3.0" style="background-color:white;">{{estudiante.codigo}}</th>
+                                    <th scope="col " *ngIf="estudiante.nota < 3.0 " style="background-color: brown; ">{{estudiante.nombre}}</th>
+                                    <th scope="col " *ngIf="estudiante.nota>=3.0" style="background-color:white">{{estudiante.nombre}}</th>
+                                    <th scope=" col " *ngIf="estudiante.nota < 3.0 " style="background-color: brown; ">{{estudiante.apellido}}</th>
+                                    <th scope="col " *ngIf="estudiante.nota>=3.0" style="background-color:white;">{{estudiante.apellido}}</th>
+                                    <th scope="col " *ngIf="estudiante.nota < 3.0 " style="background-color: brown; ">{{estudiante.nota}}</th>
+                                    <th scope="col " *ngIf="estudiante.nota>=3.0" style="background-color:white">{{estudiante.nota}}</th>
+                                    <th scope=" col " *ngIf="estudiante.nota < 3.0 " style="background-color: brown; ">{{estudiante.observacion}}</th>
+                                    <th scope="col " *ngIf="estudiante.nota>=3.0" style="background-color:white;">{{estudiante.observacion}}</th>
+                                </tr>
+
+                            </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
